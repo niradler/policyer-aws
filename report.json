@@ -1,0 +1,1 @@
+[{"configuration":{"provider":"aws-provider","type":"resource","resource":"IAM","action":"listUsers","payload":{}},"report":{"iam-userName-format":{"hasError":false,"check":"check if userName format is an email","severity":"Warning"}}}]

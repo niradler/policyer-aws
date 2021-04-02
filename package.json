@@ -1,0 +1,38 @@
+{
+  "name": "policyer-aws",
+  "version": "0.0.2",
+  "description": "Provider example to check todo api with policyer.",
+  "main": "index.js",
+  "bin": {
+    "policyer-aws": "cli.js"
+  },
+  "scripts": {
+    "start": "node cli.js -o ./report.json -p ./checks -i false -v",
+    "update": "npm uninstall policyer && npm install policyer && npm update",
+    "test": "jest"
+  },
+  "keywords": [
+    "policyer",
+    "aws"
+  ],
+  "author": "Nir Adler",
+  "license": "MIT",
+  "dependencies": {
+    "aws-sdk": "^2.872.0",
+    "policyer": "0.0.17"
+  },
+  "devDependencies": {
+    "jest": "^26.6.3"
+  },
+  "directories": {
+    "test": "tests"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/niradler/policyer-todo.git"
+  },
+  "bugs": {
+    "url": "https://github.com/niradler/policyer-todo/issues"
+  },
+  "homepage": "https://github.com/niradler/policyer-todo#readme"
+}

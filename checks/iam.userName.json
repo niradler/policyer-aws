@@ -1,0 +1,39 @@
+{
+  "configuration": {
+    "provider": "aws-provider",
+    "type": "resource",
+    "resource": "IAM",
+    "action": "listUsers",
+    "payload": {}
+  },
+  "checks": [
+    {
+      "id": "iam-userName-format",
+      "name": "check if userName format is an email",
+      "severity": "Warning",
+      "parser": "jmespath",
+      "steps": [
+        {
+          "or": [
+            {
+              "path": "Users[].UserName",
+              "condition": "equal",
+              "utility": "includes",
+              "evaluationMethod": "map",
+              "utilityProps": ["@"],
+              "value": true
+            },
+            {
+              "path": "Users[].UserName",
+              "condition": "equal",
+              "evaluationMethod": "map",
+              "utility": "includes",
+              "utilityProps": ["cli"],
+              "value": true
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
