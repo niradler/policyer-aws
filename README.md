@@ -1,4 +1,4 @@
-# policyer-todo
+# policyer-aws
 
 Provider example to check aws policies with policyer.
 
